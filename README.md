@@ -32,4 +32,16 @@ $ npx prisma-merge
   -o, --outputFile                  [default: src/prisma/schema.prisma] Output file
   -e, --excludedFilePattern         [default: src/**/schema.prisma] Glob pattern for excluded files (e.g schema.prisma in migrations / generated folder)
   -h, --help                        show CLI help
+  -c, --configFile                  [default: prisma_merge_config.json] File config
 ```
+# Or config file
+ ```
+ Filename: prisma_merge_config.json
+ 
+ {
+  "baseFile": "prisma/base.prisma",
+  "schemaFilePattern": "**/*.prisma",
+  "outputFile": "prisma/schema.prisma",
+  "excludedFilePattern": "prisma/schema.prisma"
+}
+ ```
